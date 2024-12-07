@@ -1,0 +1,261 @@
+/* ------------------------------------------------------------------------------------------------
+# File: resources/styles.css
+# This file contains the CSS styling for the web application.
+# ------------------------------------------------------------------------------------------------
+# Tabamo, Euan Jed S. AB-3L
+# Project in CMSC 150: Numerical and Symbolic Computing
+# Date Created: 06 November 2024
+# Date Modified: 05 December 2024
+------------------------------------------------------------------------------------------------ */
+/* styles.css */
+
+/* Import font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap');
+
+/* Variables */
+
+:root {
+  --font-primary: 'Inconsolata', monospace;
+  --color-primary: #212121;
+  --color-secondary: #F1F0E8;
+  --color-accent: #89A8B2;
+  --color-accent2: #B3C8CF;
+  --color-background: #E5E1DA;
+
+  /* Font Sizes in Major Second Scale */
+  --font-size-h1: 2.027rem;
+  --font-size-h2: 1.802rem;
+  --font-size-h3: 1.602rem;
+  --font-size-h4: 1.424rem;
+  --font-size-h5: 1.266rem;
+  --font-size-h6: 1.125rem;
+  --font-size-p: 1rem;
+  --font-size-small: 0.889rem;
+  --font-size-smaller: 0.79rem;
+}
+
+/* HTML Element Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: 500;
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
+/* Main Body */
+
+.bslib-page-fill {
+  background-color: var(--color-background);
+  gap: 0.5rem;
+}
+
+/* Text and Color */
+
+* {
+  font-family: var(--font-primary);
+}
+
+.app-title {
+  text-align: center;
+  font-weight: 600;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+/* Cards */
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .bslib-gap-spacing {
+    gap: 1rem;
+  }
+}
+
+.card {
+  background-color: var(--color-secondary);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* Navigation Bars */
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  .nav-item {
+    .nav-link {
+
+      h2,
+      h3 {
+        font-weight: 600;
+      }
+
+      &.active {
+        background-color: var(--color-accent);
+
+        h2,
+        h3 {
+          color: var(--color-secondary);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* Home Page */
+
+.home-layout {
+  width: 100%;
+
+  .food-items-card {
+    .food-items-buttons {
+      display: flex;
+      flex-direction: rows;
+      gap: 1em;
+    }
+
+    .selectize-input {
+      border-radius: 0.5em;
+      border-color: transparent;
+    }
+
+    .btn {
+      border-radius: 0.5em;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background-color: var(--color-accent);
+      border-color: var(--color-secondary);
+
+      h4,
+      h6 {
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
+
+#diet_plan_selected_foods_text_output {
+  max-height: 6em;
+  overflow: auto;
+}
+
+/* Optimization Logs Page */
+
+.optimization-logs-tables>div {
+  height: 100%;
+  overflow: auto;
+}
+
+.optimization-logs-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50em;
+  gap: 0;
+  text-align: center;
+}
+
+.optimization-logs-buttons {
+  .btn {
+    border-radius: 0.5em;
+  }
+
+  .btn:hover,
+  .btn:focus-visible {
+    background-color: var(--color-accent);
+    border-color: var(--color-secondary);
+
+    h4,
+    h6 {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+/* About Page */
+
+.about-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2em;
+  max-width: 50em;
+}
+
+.about-dev {
+  display: flex;
+  justify-content: center;
+  max-width: 50em;
+
+  .about-image {
+    img {
+      border-radius: 50%;
+      height: 15em;
+      width: 15em;
+      object-fit: cover;
+    }
+  }
+
+  .about-dev-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+}
